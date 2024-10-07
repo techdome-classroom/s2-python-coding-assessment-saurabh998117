@@ -30,6 +30,6 @@ solution = Solution()
 
 print(solution.romanToInt("III"))    
 print(solution.romanToInt("IV"))     
-print(solution.romanToInt("IX"))     # Output: 9
+print(solution.romanToInt("IX"))     
 print(solution.romanToInt("LVIII"))  # Output: 58
 print(solution.romanToInt("MCMXCIV")) # Output: 1994
