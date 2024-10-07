@@ -21,4 +21,6 @@ def romanToInt(s):
 
     return total
 
-
+# Example usage:
+# result = romanToInt('MCMXCIV')
+# print(result) # Output will be 1994
