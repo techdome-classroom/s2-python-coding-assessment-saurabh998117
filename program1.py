@@ -16,8 +16,8 @@ class Solution(object):
 # Example usage:
 solution = Solution()
 
-print(solution.isValid("()"))       # Output: True
-print(solution.isValid("()[]{}"))   # Output: True
+print(solution.isValid("()"))      
+print(solution.isValid("()[]{}"))   
 print(solution.isValid("(]"))       # Output: False
 print(solution.isValid("([)]"))     # Output: False
 print(solution.isValid("{[]}"))     # Output: True
