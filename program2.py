@@ -25,7 +25,7 @@ class Solution(object):
 
         return total
 
-# Example usage:
+
 solution = Solution()
 
 print(solution.romanToInt("III"))    
