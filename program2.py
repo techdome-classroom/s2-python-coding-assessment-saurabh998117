@@ -1,35 +1,26 @@
-class Solution(object):
-    def romanToInt(self, s):
-        roman_values = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 1000
-        }
+def romanToInt(s):
+    roman = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
 
-        total = 0
-        prev_value = 0
+    total = 0
+    for i in range(len(s)):
+        current = roman[s[i]]
+        next_value = roman[s[i + 1]] if i + 1 < len(s) else 0
 
-        for char in reversed(s):
-            current_value = roman_values[char]
+        if current < next_value:
+            total -= current
+        else:
+            total += current
 
-            if current_value < prev_value:
-                total -= current_value
-            else:
-                total += current_value
+    return total
 
-            prev_value = current_value
-
-        return total
-
-
-solution = Solution()
-
-print(solution.romanToInt("III"))    
-print(solution.romanToInt("IV"))     
-print(solution.romanToInt("IX"))     
-print(solution.romanToInt("LVIII"))  
-print(solution.romanToInt("MCMXCIV")) 
+# Example usage:
+# result = romanToInt('MCMXCIV')
+# print(result) # Output will be 1994
