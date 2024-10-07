@@ -28,8 +28,8 @@ class Solution(object):
 # Example usage:
 solution = Solution()
 
-print(solution.romanToInt("III"))    # Output: 3
-print(solution.romanToInt("IV"))     # Output: 4
+print(solution.romanToInt("III"))    
+print(solution.romanToInt("IV"))     
 print(solution.romanToInt("IX"))     # Output: 9
 print(solution.romanToInt("LVIII"))  # Output: 58
 print(solution.romanToInt("MCMXCIV")) # Output: 1994
