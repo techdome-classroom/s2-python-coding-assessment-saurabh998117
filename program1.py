@@ -1,23 +1,37 @@
-class Solution(object):
-    def isValid(self, s):
-        bracket_map = {')': '(', '}': '{', ']': '['}
-        stack = []
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int st=0;
+        int end=nums.size()-1;
+        while(st<=end){
+         int mid= st+(end-st)/2;
+         if(nums[mid]==target){
+            return mid;
 
-        for char in s:
-            if char in bracket_map:
-                top_element = stack.pop() if stack else '#'
-                if bracket_map[char] != top_element:
-                    return False
-            else:
-                stack.append(char)
+         }
+         if(nums[st]<=nums[mid]){
+            if(nums[st]<=target && target<= nums[mid]){
+                end=mid-1;
 
-        return not stack
+            }
+            else
+            st=mid+1;
 
+         }
 
-solution = Solution()
+        
+     
+        }
+        else{
+            if(nums[mid]<=target && target<=nums[end]){
+                st=mid+1;
+            }
+            else
+           {
+            end=mid-1;
+           }
+        }
+    }
+    return -1;
 
-print(solution.isValid("()"))      
-print(solution.isValid("()[]{}"))   
-print(solution.isValid("(]"))       
-print(solution.isValid("([)]"))     
-print(solution.isValid("{[]}"))    
+};
